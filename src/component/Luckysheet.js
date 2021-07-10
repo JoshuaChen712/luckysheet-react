@@ -5,8 +5,18 @@ class Luckysheet extends React.Component {
         const luckysheet = window.luckysheet;
         luckysheet.create({
             container: "luckysheet",
-            plugins:['chart']
+            title:'hello',
+            plugins:['chart'],
+            lang:'zh',
+            showtoolbar:false,
+            showinfobar:false,
+            showsheetbar:false,
+            showstatisticBar:false,
+            allowUpdate:true,
+            loadUrl:"http://localhost:8080/getSheetDataTest/3",
+            updateUrl:"ws://localhost:8080/webSocket"
         });
+        // console.log(luckysheet.getluckysheetfile());
     }
     render() {
         const luckyCss = {
